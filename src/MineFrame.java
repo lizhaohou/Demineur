@@ -91,7 +91,7 @@ public class MineFrame extends JFrame implements ActionListener
 		/**
 		 * begin BUTTON initialization  (the smile face above the mines)
 		 */
-		beginBtn=new JButton(new ImageIcon(MineFrame.class.getResource("res/image/beginBtn.jpg")));
+		beginBtn=new JButton(new ImageIcon("res/image/beginBtn.jpg"));
 		beginBtn.setFocusPainted(false);
 		beginBtn.setBorder(new BevelBorder(BevelBorder.RAISED));
 		beginBtn.addMouseListener(new beginBtnFace());
@@ -401,15 +401,15 @@ public class MineFrame extends JFrame implements ActionListener
 			/**
 			 *  deduce from id, if not mine, should display its number
 			 */
-			if(mbtn.id==10){mbtn.setIcon(new ImageIcon(MineFrame.class.getResource("res/image/0.gif")));mbtn.setDisabledIcon(new ImageIcon(MineFrame.class.getResource("res/image/0.gif")));mbtn.id-=10;}
-			if(mbtn.id==11){mbtn.setIcon(new ImageIcon(MineFrame.class.getResource("res/image/1.gif")));mbtn.setDisabledIcon(new ImageIcon(MineFrame.class.getResource("res/image/1.gif")));mbtn.id-=10;}
-			if(mbtn.id==12){mbtn.setIcon(new ImageIcon(MineFrame.class.getResource("res/image/2.gif")));mbtn.setDisabledIcon(new ImageIcon(MineFrame.class.getResource("res/image/2.gif")));mbtn.id-=10;}
-			if(mbtn.id==13){mbtn.setIcon(new ImageIcon(MineFrame.class.getResource("res/image/3.gif")));mbtn.setDisabledIcon(new ImageIcon(MineFrame.class.getResource("res/image/3.gif")));mbtn.id-=10;}
-			if(mbtn.id==14){mbtn.setIcon(new ImageIcon(MineFrame.class.getResource("res/image/4.gif")));mbtn.setDisabledIcon(new ImageIcon(MineFrame.class.getResource("res/image/4.gif")));mbtn.id-=10;}
-			if(mbtn.id==15){mbtn.setIcon(new ImageIcon(MineFrame.class.getResource("res/image/5.gif")));mbtn.setDisabledIcon(new ImageIcon(MineFrame.class.getResource("res/image/5.gif")));mbtn.id-=10;}
-			if(mbtn.id==16){mbtn.setIcon(new ImageIcon(MineFrame.class.getResource("res/image/6.gif")));mbtn.setDisabledIcon(new ImageIcon(MineFrame.class.getResource("res/image/6.gif")));mbtn.id-=10;}
-			if(mbtn.id==17){mbtn.setIcon(new ImageIcon(MineFrame.class.getResource("res/image/7.gif")));mbtn.setDisabledIcon(new ImageIcon(MineFrame.class.getResource("res/image/7.gif")));mbtn.id-=10;}
-			if(mbtn.id==18){mbtn.setIcon(new ImageIcon(MineFrame.class.getResource("res/image/8.gif")));mbtn.setDisabledIcon(new ImageIcon(MineFrame.class.getResource("res/image/8.gif")));mbtn.id-=10;}
+			if(mbtn.id==10){mbtn.setIcon(new ImageIcon("res/image/0.gif"));mbtn.setDisabledIcon(new ImageIcon("res/image/0.gif"));mbtn.id-=10;}
+			if(mbtn.id==11){mbtn.setIcon(new ImageIcon("res/image/1.gif"));mbtn.setDisabledIcon(new ImageIcon("res/image/1.gif"));mbtn.id-=10;}
+			if(mbtn.id==12){mbtn.setIcon(new ImageIcon("res/image/2.gif"));mbtn.setDisabledIcon(new ImageIcon("res/image/2.gif"));mbtn.id-=10;}
+			if(mbtn.id==13){mbtn.setIcon(new ImageIcon("res/image/3.gif"));mbtn.setDisabledIcon(new ImageIcon("res/image/3.gif"));mbtn.id-=10;}
+			if(mbtn.id==14){mbtn.setIcon(new ImageIcon("res/image/4.gif"));mbtn.setDisabledIcon(new ImageIcon("res/image/4.gif"));mbtn.id-=10;}
+			if(mbtn.id==15){mbtn.setIcon(new ImageIcon("res/image/5.gif"));mbtn.setDisabledIcon(new ImageIcon("res/image/5.gif"));mbtn.id-=10;}
+			if(mbtn.id==16){mbtn.setIcon(new ImageIcon("res/image/6.gif"));mbtn.setDisabledIcon(new ImageIcon("res/image/6.gif"));mbtn.id-=10;}
+			if(mbtn.id==17){mbtn.setIcon(new ImageIcon("res/image/7.gif"));mbtn.setDisabledIcon(new ImageIcon("res/image/7.gif"));mbtn.id-=10;}
+			if(mbtn.id==18){mbtn.setIcon(new ImageIcon("res/image/8.gif"));mbtn.setDisabledIcon(new ImageIcon("res/image/8.gif"));mbtn.id-=10;}
 			mbtn.setBorder(new EmptyBorder(new Insets(1,1,1,1)));
 			mbtn.setEnabled(false);
 			win();             //detect if win
@@ -424,14 +424,14 @@ public class MineFrame extends JFrame implements ActionListener
 					if(mbtn.id==19)
 					{
 						mbtn.setEnabled(false);
-						mbtn.setIcon(new ImageIcon(MineFrame.class.getResource("res/image/DiLei_Bomd.gif")));
-						mbtn.setDisabledIcon(new ImageIcon(MineFrame.class.getResource("res/image/DiLei_Bomd.gif")));
+						mbtn.setIcon(new ImageIcon("res/image/DiLei_Bomd.gif"));
+						mbtn.setDisabledIcon(new ImageIcon("res/image/DiLei_Bomd.gif"));
 						if(mineBtn[i][j].id==19)
 						{
 							mineBtn[i][j].setEnabled(false);
-							mineBtn[i][j].setIcon(new ImageIcon(MineFrame.class.getResource("res/image/DiLei.gif")));
-							mineBtn[i][j].setDisabledIcon(new ImageIcon(MineFrame.class.getResource("res/image/DiLei.gif")));
-							beginBtn.setIcon(new ImageIcon(MineFrame.class.getResource("res/image/88.jpg")));
+							mineBtn[i][j].setIcon(new ImageIcon("res/image/DiLei.gif"));
+							mineBtn[i][j].setDisabledIcon(new ImageIcon("res/image/DiLei.gif"));
+							beginBtn.setIcon(new ImageIcon("res/image/88.jpg"));
 							e.consume();
 							if(t.isRunning())
 							{
@@ -466,7 +466,7 @@ public class MineFrame extends JFrame implements ActionListener
 						{
 							if(mbtn==mineBtn[i][j] & mineBtn[i][j].id<20)
 							{
-								mbtn.setIcon(new ImageIcon(MineFrame.class.getResource("res/image/FLAG.GIF"))); //À×£¬²åÆì
+								mbtn.setIcon(new ImageIcon("res/image/FLAG.GIF")); //À×£¬²åÆì
 								mineBtn[i][j].id+=10;
 								mineNumber--;
 								if(mineNumber==0)
@@ -537,7 +537,7 @@ public class MineFrame extends JFrame implements ActionListener
 		{
 			t.stop();
 			bool=false;
-			beginBtn.setIcon(new ImageIcon(MineFrame.class.getResource("res/image/ok.jpg")));
+			beginBtn.setIcon(new ImageIcon("res/image/ok.jpg"));
 			finishtime=Integer.parseInt(lb2.getText().trim());
 			JOptionPane.showMessageDialog(null,"Finish time:"+finishtime,"You WIN!",JOptionPane.INFORMATION_MESSAGE);
 		}
@@ -564,22 +564,22 @@ public class MineFrame extends JFrame implements ActionListener
 					mineBtn[i+x][j+y].id-=10;
 					if(mineBtn[i+x][j+y].id==0)
 					{
-						mineBtn[i+x][j+y].setIcon(new ImageIcon(MineFrame.class.getResource("res/image/0.gif")));
-						mineBtn[i+x][j+y].setDisabledIcon(new ImageIcon(MineFrame.class.getResource("res/image/0.gif")));
+						mineBtn[i+x][j+y].setIcon(new ImageIcon("res/image/0.gif"));
+						mineBtn[i+x][j+y].setDisabledIcon(new ImageIcon("res/image/0.gif"));
 						mineBtn[i+x][j+y].setEnabled(false);
 						mineBtn[i+x][j+y].setBorder(new EmptyBorder(new Insets(1,1,1,1)));
 						recursion(i+x,j+y);
 					}
 					if(mineBtn[i+x][j+y].id>=1 && mineBtn[i+x][j+y].id<=8)    
 					{
-						if(mineBtn[i+x][j+y].id==1){mineBtn[i+x][j+y].setIcon(new ImageIcon(MineFrame.class.getResource("res/image/1.gif")));mineBtn[i+x][j+y].setDisabledIcon(new ImageIcon(MineFrame.class.getResource("res/image/1.gif")));}
-						if(mineBtn[i+x][j+y].id==2){mineBtn[i+x][j+y].setIcon(new ImageIcon(MineFrame.class.getResource("res/image/2.gif")));mineBtn[i+x][j+y].setDisabledIcon(new ImageIcon(MineFrame.class.getResource("res/image/2.gif")));}
-						if(mineBtn[i+x][j+y].id==3){mineBtn[i+x][j+y].setIcon(new ImageIcon(MineFrame.class.getResource("res/image/3.gif")));mineBtn[i+x][j+y].setDisabledIcon(new ImageIcon(MineFrame.class.getResource("res/image/3.gif")));}
-						if(mineBtn[i+x][j+y].id==4){mineBtn[i+x][j+y].setIcon(new ImageIcon(MineFrame.class.getResource("res/image/4.gif")));mineBtn[i+x][j+y].setDisabledIcon(new ImageIcon(MineFrame.class.getResource("res/image/4.gif")));}
-						if(mineBtn[i+x][j+y].id==5){mineBtn[i+x][j+y].setIcon(new ImageIcon(MineFrame.class.getResource("res/image/5.gif")));mineBtn[i+x][j+y].setDisabledIcon(new ImageIcon(MineFrame.class.getResource("res/image/5.gif")));}
-						if(mineBtn[i+x][j+y].id==6){mineBtn[i+x][j+y].setIcon(new ImageIcon(MineFrame.class.getResource("res/image/6.gif")));mineBtn[i+x][j+y].setDisabledIcon(new ImageIcon(MineFrame.class.getResource("res/image/6.gif")));}
-						if(mineBtn[i+x][j+y].id==7){mineBtn[i+x][j+y].setIcon(new ImageIcon(MineFrame.class.getResource("res/image/7.gif")));mineBtn[i+x][j+y].setDisabledIcon(new ImageIcon(MineFrame.class.getResource("res/image/7.gif")));}
-						if(mineBtn[i+x][j+y].id==8){mineBtn[i+x][j+y].setIcon(new ImageIcon(MineFrame.class.getResource("res/image/8.gif")));mineBtn[i+x][j+y].setDisabledIcon(new ImageIcon(MineFrame.class.getResource("res/image/8.gif")));}
+						if(mineBtn[i+x][j+y].id==1){mineBtn[i+x][j+y].setIcon(new ImageIcon("res/image/1.gif"));mineBtn[i+x][j+y].setDisabledIcon(new ImageIcon("res/image/1.gif"));}
+						if(mineBtn[i+x][j+y].id==2){mineBtn[i+x][j+y].setIcon(new ImageIcon("res/image/2.gif"));mineBtn[i+x][j+y].setDisabledIcon(new ImageIcon("res/image/2.gif"));}
+						if(mineBtn[i+x][j+y].id==3){mineBtn[i+x][j+y].setIcon(new ImageIcon("res/image/3.gif"));mineBtn[i+x][j+y].setDisabledIcon(new ImageIcon("res/image/3.gif"));}
+						if(mineBtn[i+x][j+y].id==4){mineBtn[i+x][j+y].setIcon(new ImageIcon("res/image/4.gif"));mineBtn[i+x][j+y].setDisabledIcon(new ImageIcon("res/image/4.gif"));}
+						if(mineBtn[i+x][j+y].id==5){mineBtn[i+x][j+y].setIcon(new ImageIcon("res/image/5.gif"));mineBtn[i+x][j+y].setDisabledIcon(new ImageIcon("res/image/5.gif"));}
+						if(mineBtn[i+x][j+y].id==6){mineBtn[i+x][j+y].setIcon(new ImageIcon("res/image/6.gif"));mineBtn[i+x][j+y].setDisabledIcon(new ImageIcon("res/image/6.gif"));}
+						if(mineBtn[i+x][j+y].id==7){mineBtn[i+x][j+y].setIcon(new ImageIcon("res/image/7.gif"));mineBtn[i+x][j+y].setDisabledIcon(new ImageIcon("res/image/7.gif"));}
+						if(mineBtn[i+x][j+y].id==8){mineBtn[i+x][j+y].setIcon(new ImageIcon("res/image/8.gif"));mineBtn[i+x][j+y].setDisabledIcon(new ImageIcon("res/image/8.gif"));}
 						mineBtn[i+x][j+y].setBorder(new EmptyBorder(new Insets(1,1,1,1)));
 						mineBtn[i+x][j+y].setEnabled(false);
 					}
